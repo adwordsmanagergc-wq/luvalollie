@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Luv A Lollie — a family-run sweet shop in Sheffield, Tasmania. Groovy retro sweets, lollipops and candy delivered to your door." />
+  <title>Luv A Lollie — Groovy Sweets Delivered to Your Door!</title>
+
+  <!-- Google Fonts: retro/groovy headings + clean body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bungee+Shade&family=Lobster&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ ANIMATED SPIRAL BACKGROUND MOTIFS ============ -->
+  <div class="spiral-field" aria-hidden="true">
+    <span class="spiral spiral--1"></span>
+    <span class="spiral spiral--2"></span>
+    <span class="spiral spiral--3"></span>
+    <span class="spiral spiral--4"></span>
+  </div>
+
+  <!-- floating lollipop sprites are injected here by script.js -->
+  <div class="lolly-field" id="lollyField" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="top">
+    <a href="#top" class="brand">
+      <span class="brand-swirl" aria-hidden="true"></span>
+      <span class="brand-name">Luv A Lollie</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#top">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart" id="cartBtn" type="button" aria-label="Shopping cart">
+      <span class="cart-icon" aria-hidden="true">&#127852;</span>
+      <span class="cart-label">Cart</span>
+      <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+    </button>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <!-- [PLACEHOLDER: background image — replace via GitHub] -->
+    <!-- full-width spiral / tie-dye backdrop lives in CSS: background-image: url('images/hero-background.png') -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-kicker">&#9788; Peace &middot; Love &middot; Lollipops &#9788;</p>
+          <h1 class="hero-title">
+            <span class="word" style="--c:var(--pink)">Luv</span>
+            <span class="word" style="--c:var(--orange)">A</span>
+            <span class="word" style="--c:var(--purple)">Lollie</span>
+          </h1>
+          <p class="hero-tagline">Groovy sweets delivered to your door!</p>
+          <a href="#shop" class="btn btn--shop">Shop Now</a>
+
+          <p class="placeholder-note">
+            [PLACEHOLDER: background image — replace via GitHub] &mdash;
+            swap <code>images/hero-background.png</code>
+          </p>
+        </div>
+
+        <div class="hero-image-area">
+          <!-- [PLACEHOLDER: sweets image — replace via GitHub] -->
+          <div class="hero-image-frame">
+            <img
+              src="images/hero-sweets.png"
+              alt="A colourful bunch of rainbow swirl lollipops and retro sweets"
+              class="hero-image"
+              data-fallback="lollipop"
+            />
+          </div>
+          <p class="placeholder-note">
+            [PLACEHOLDER: sweets image — replace via GitHub] &mdash;
+            swap <code>images/hero-sweets.png</code>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===================== SHOP ===================== -->
+    <section class="shop section" id="shop">
+      <div class="section-head">
+        <h2 class="section-title">Featured Sweets</h2>
+        <p class="section-sub">Far-out treats, freshly jarred &mdash; prices in AUD</p>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- product cards injected by script.js -->
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about">
+      <div class="about-inner">
+        <div class="about-spinner" aria-hidden="true"></div>
+        <div class="about-text">
+          <h2 class="section-title">About Us</h2>
+          <p>
+            Luv A Lollie is a little family-run sweet shop tucked away in
+            <strong>Sheffield, Tasmania</strong> &mdash; spreading peace, love and
+            lollipops since forever. We hand-pick every gobstopper, twist every
+            swirl, and jar up the brightest, grooviest candy this side of the
+            rainbow.
+          </p>
+          <p>
+            Step inside and it&rsquo;s 1972 all over again: tie-dye on the walls,
+            sherbet in the air, and a sugar rush of colour in every corner. Whether
+            you&rsquo;re after a nostalgic retro mix bag or a giant swirl pop, we
+            deliver the joy straight to your door.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VISIT ===================== -->
+    <section class="visit section" id="visit">
+      <div class="section-head">
+        <h2 class="section-title">Visit Us</h2>
+        <p class="section-sub">Pop in and say hello &mdash; the kettle&rsquo;s always on</p>
+      </div>
+
+      <div class="visit-inner">
+        <div class="visit-details">
+          <ul class="visit-list">
+            <li>
+              <span class="visit-icon" aria-hidden="true">&#128205;</span>
+              <span><strong>Address</strong><br />74 Main St, Sheffield TAS 7306, Australia</span>
+            </li>
+            <li>
+              <span class="visit-icon" aria-hidden="true">&#128222;</span>
+              <span><strong>Phone</strong><br /><a href="tel:+61364923215">03 6492 3215</a></span>
+            </li>
+            <li>
+              <span class="visit-icon" aria-hidden="true">&#128336;</span>
+              <span><strong>Opening Hours</strong><br />10am &ndash; 5pm, daily</span>
+            </li>
+          </ul>
+          <a
+            class="btn btn--map"
+            href="https://www.google.com/maps/dir/?api=1&destination=74+Main+St+Sheffield+TAS+7306+Australia"
+            target="_blank"
+            rel="noopener"
+          >Get Directions</a>
+        </div>
+
+        <div class="visit-map">
+          <iframe
+            title="Map showing Luv A Lollie at 74 Main St, Sheffield TAS 7306"
+            src="https://www.google.com/maps?q=74+Main+St,+Sheffield+TAS+7306,+Australia&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== CONTACT / FOOTER ===================== -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3 class="footer-brand">Luv A Lollie</h3>
+        <p>Groovy sweets delivered to your door since forever.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <p>74 Main St, Sheffield TAS 7306, Australia</p>
+        <p><a href="tel:+61364923215">03 6492 3215</a></p>
+        <p>Open 10am &ndash; 5pm, daily</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow the Groove</h4>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Luv A Lollie on Instagram" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.17-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4C15.5 4.01 15.15 4 12 4Zm0 3.05A4.95 4.95 0 1 1 7.05 12 4.95 4.95 0 0 1 12 7.05Zm0 1.8A3.15 3.15 0 1 0 15.15 12 3.15 3.15 0 0 0 12 8.85Zm5.15-3.2a1.16 1.16 0 1 1-1.16 1.15 1.16 1.16 0 0 1 1.16-1.15Z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Luv A Lollie on Facebook" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="Luv A Lollie on TikTok" class="social">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M16.5 3h-3v12.2a2.8 2.8 0 1 1-2.3-2.76V9.4a5.9 5.9 0 1 0 5.3 5.87V9.06a7.3 7.3 0 0 0 4 1.2V7.2a4.3 4.3 0 0 1-4-4.2Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; <span id="year"></span> Luv A Lollie &middot; Made with peace, love &amp; lollipops in Tasmania
+    </p>
+  </footer>
+
+  <!-- toast for add-to-cart feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
