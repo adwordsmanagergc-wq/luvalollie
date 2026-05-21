@@ -299,25 +299,6 @@ a { color: inherit; }
   margin-bottom: 1.4rem;
 }
 
-/* swap-me placeholder labels */
-.placeholder-note {
-  margin-top: 1rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--ink);
-  background: rgba(255, 210, 63, 0.85);
-  border: 2px dashed var(--purple);
-  border-radius: 12px;
-  padding: 0.45rem 0.7rem;
-  display: inline-block;
-}
-.placeholder-note code {
-  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 0 0.25rem;
-  border-radius: 4px;
-}
-
 /* hero sweets image */
 .hero-image-area { text-align: center; }
 
