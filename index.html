@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Luv A Lollie — a family-run sweet shop in Sheffield, Tasmania. Groovy retro sweets, lollipops and candy delivered to your door." />
-  <title>Luv A Lollie — Groovy Sweets Delivered to Your Door!</title>
+  <meta name="description" content="Luv A Lollie is Tasmania's best sweet shop — a family-run candy store in Sheffield, the Town of Murals, and a favourite stop for tourists visiting Cradle Mountain and Mt Roland. Retro lollies, fudge and pick-and-mix delivered to your door." />
+  <meta name="keywords" content="sweet shop Tasmania, best sweet shop Tasmania, Sheffield Tasmania, lolly shop, candy store, Cradle Mountain, Mt Roland, Town of Murals, things to do in Sheffield Tasmania, Tasmania tourist attractions, north-west Tasmania, retro sweets" />
+  <meta name="author" content="Luv A Lollie" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="AU-TAS" />
+  <meta name="geo.placename" content="Sheffield, Tasmania" />
+  <meta name="geo.position" content="-41.379;146.292" />
+  <meta name="ICBM" content="-41.379, 146.292" />
+  <title>Luv A Lollie — Tasmania's Best Sweet Shop in Sheffield | Near Cradle Mountain &amp; Mt Roland</title>
+
+  <!-- Open Graph / social cards -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="Luv A Lollie — Tasmania's Best Sweet Shop in Sheffield" />
+  <meta property="og:description" content="A family-run candy store in Sheffield, Tasmania — loved by tourists exploring Cradle Mountain and Mt Roland. Retro lollies, fudge and pick-and-mix." />
+  <meta property="og:image" content="images/hero-sweets.png" />
+  <meta property="og:locale" content="en_AU" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luv A Lollie — Tasmania's Best Sweet Shop in Sheffield" />
+  <meta name="twitter:description" content="A family-run candy store in Sheffield, Tasmania — loved by tourists exploring Cradle Mountain and Mt Roland." />
+  <meta name="twitter:image" content="images/hero-sweets.png" />
 
   <!-- Google Fonts: retro/groovy headings + clean body -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +33,39 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data: helps search engines show the shop in local / map results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Luv A Lollie",
+    "description": "Tasmania's best sweet shop — a family-run candy store in Sheffield, the Town of Murals, loved by tourists visiting Cradle Mountain and Mt Roland.",
+    "image": "images/hero-sweets.png",
+    "telephone": "+61-3-6492-3215",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "74 Main St",
+      "addressLocality": "Sheffield",
+      "addressRegion": "TAS",
+      "postalCode": "7306",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -41.379,
+      "longitude": 146.292
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "17:00"
+    },
+    "areaServed": ["Sheffield", "Cradle Mountain", "Mt Roland", "North-West Tasmania"]
+  }
+  </script>
 </head>
 <body>
   <!-- ============ ANIMATED SPIRAL BACKGROUND MOTIFS ============ -->
@@ -65,7 +116,11 @@
             <span class="word" style="--c:var(--orange)">A</span>
             <span class="word" style="--c:var(--purple)">Lollie</span>
           </h1>
-          <p class="hero-tagline">Groovy sweets delivered to your door!</p>
+          <p class="hero-tagline">Tasmania&rsquo;s best sweet shop</p>
+          <p class="hero-blurb">
+            A joyful candy stop in Sheffield &mdash; loved by tourists exploring
+            <strong>Cradle Mountain</strong> &amp; <strong>Mt Roland</strong>.
+          </p>
           <a href="#shop" class="btn btn--shop">Shop Now</a>
         </div>
 
@@ -102,17 +157,18 @@
         <div class="about-text">
           <h2 class="section-title">About Us</h2>
           <p>
-            Luv A Lollie is a little family-run sweet shop tucked away in
-            <strong>Sheffield, Tasmania</strong> &mdash; spreading peace, love and
-            lollipops since forever. We hand-pick every gobstopper, twist every
-            swirl, and jar up the brightest, grooviest candy this side of the
-            rainbow.
+            Luv A Lollie is a little family-run sweet shop in the heart of
+            <strong>Sheffield, Tasmania</strong> &mdash; the famous Town of Murals,
+            nestled beneath <strong>Mt Roland</strong> and just down the road from
+            <strong>Cradle Mountain</strong>. We hand-pick every gobstopper, twist
+            every swirl, and jar up the brightest candy this side of the rainbow.
           </p>
           <p>
-            Step inside and it&rsquo;s 1972 all over again: tie-dye on the walls,
-            sherbet in the air, and a sugar rush of colour in every corner. Whether
-            you&rsquo;re after a nostalgic retro mix bag or a giant swirl pop, we
-            deliver the joy straight to your door.
+            We&rsquo;re a favourite pit-stop for travellers and tourists exploring
+            north-west Tasmania &mdash; whether you&rsquo;re heading up to the
+            Cradle Mountain&ndash;Lake St Clair National Park, hiking Mt Roland, or
+            wandering Sheffield&rsquo;s open-air mural gallery. Pop in for a sugar
+            rush of colour, or have our retro sweets delivered straight to your door.
           </p>
         </div>
       </div>
@@ -122,7 +178,7 @@
     <section class="visit section" id="visit">
       <div class="section-head">
         <h2 class="section-title">Visit Us</h2>
-        <p class="section-sub">Pop in and say hello &mdash; the kettle&rsquo;s always on</p>
+        <p class="section-sub">Pop in on your way to Cradle Mountain &mdash; we&rsquo;re right on Sheffield&rsquo;s Main Street</p>
       </div>
 
       <div class="visit-inner">
@@ -170,7 +226,7 @@
     <div class="footer-inner">
       <div class="footer-col">
         <h3 class="footer-brand">Luv A Lollie</h3>
-        <p>Groovy sweets delivered to your door since forever.</p>
+        <p>Tasmania&rsquo;s best sweet shop, in the heart of Sheffield &mdash; the Town of Murals, near Cradle Mountain &amp; Mt Roland.</p>
       </div>
 
       <div class="footer-col">
