@@ -331,44 +331,50 @@ a { color: inherit; }
 
 /* ========================== VIDEOS ================================ */
 .video-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .slider-track {
   display: flex;
-  gap: 1.2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  justify-content: safe center;
-  padding: 0.4rem 0.25rem 1.2rem;
   scrollbar-width: none;
 }
 .slider-track::-webkit-scrollbar { display: none; }
 
+/* each slide is exactly one screen wide, so a swipe lands on one video */
 .slide {
-  flex: 0 0 auto;
-  width: clamp(325px, 90vw, 340px);
-  scroll-snap-align: center;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
   display: flex;
   justify-content: center;
+  padding-bottom: 0.4rem;
 }
 
-/* TikTok's embed.js swaps the blockquote for an iframe — keep it tidy */
-.slide .tiktok-embed,
-.slide iframe {
-  max-width: 100% !important;
-  margin: 0 auto !important;
+.tiktok-frame {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: 760px;
+  border: 0;
   border-radius: 22px;
+  background: #120a1c;
+  box-shadow: var(--shadow-soft);
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-top: 1rem;
 }
 
 .slider-btn {
-  flex: none;
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   border: none;
   cursor: pointer;
   border-radius: 50%;
@@ -407,12 +413,6 @@ a { color: inherit; }
   0%, 100% { transform: translateY(0) scale(1); }
   30%      { transform: translateY(-12px) scale(1.06); }
   60%      { transform: translateY(-4px)  scale(1.02); }
-}
-
-.btn--hero {
-  background: linear-gradient(135deg, var(--pink), var(--orange));
-  font-size: 1.3rem;
-  padding: 1rem 2.4rem;
 }
 
 .btn--map {
@@ -514,19 +514,6 @@ a { color: inherit; }
   box-shadow: var(--shadow-pop);
 }
 
-.follow-badge {
-  width: 78px;
-  height: 78px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.22);
-  margin-bottom: 0.7rem;
-  animation: float-bob 5s ease-in-out infinite;
-}
-.follow-badge svg { width: 46px; height: 46px; fill: #fff; }
-
 .follow .section-title {
   color: #fff;
   text-shadow: 2px 2px 0 rgba(58, 29, 77, 0.35);
@@ -539,10 +526,28 @@ a { color: inherit; }
   max-width: 42ch;
 }
 
-.btn--insta {
-  background: #fff;
-  color: var(--purple);
+.follow-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
+
+.follow-social {
+  width: 62px;
+  height: 62px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.18s ease;
+}
+.follow-social:hover,
+.follow-social:focus-visible {
+  transform: translateY(-6px) rotate(-6deg) scale(1.08);
+}
+.follow-social svg { width: 32px; height: 32px; fill: var(--purple); }
 
 /* =========================== FOOTER =============================== */
 .footer {
