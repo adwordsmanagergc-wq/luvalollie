@@ -554,6 +554,51 @@ a { color: inherit; }
 }
 .visit-map iframe { display: block; min-height: 340px; }
 
+/* ========================= FOLLOW US ============================== */
+.follow { text-align: center; }
+
+.follow-card {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.2rem);
+  border-radius: 34px;
+  color: #fff;
+  background: linear-gradient(
+    135deg, var(--yellow), var(--orange) 35%, var(--pink) 65%, var(--purple)
+  );
+  box-shadow: var(--shadow-pop);
+}
+
+.follow-badge {
+  width: 78px;
+  height: 78px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.22);
+  margin-bottom: 0.7rem;
+  animation: float-bob 5s ease-in-out infinite;
+}
+.follow-badge svg { width: 46px; height: 46px; fill: #fff; }
+
+.follow .section-title {
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(58, 29, 77, 0.35);
+}
+
+.follow-text {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin: 0.4rem auto 1.4rem;
+  max-width: 42ch;
+}
+
+.btn--insta {
+  background: #fff;
+  color: var(--purple);
+}
+
 /* =========================== FOOTER =============================== */
 .footer {
   margin-top: 3rem;
