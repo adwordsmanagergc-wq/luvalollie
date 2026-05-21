@@ -548,6 +548,21 @@ a { color: inherit; }
   color: var(--yellow);
 }
 
+.footer-credit {
+  text-align: center;
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+.footer-credit a {
+  color: #fff;
+  font-weight: 800;
+  text-decoration: underline;
+}
+.footer-credit a:hover,
+.footer-credit a:focus-visible { color: var(--yellow); }
+
 /* ========================= RESPONSIVE ============================= */
 @media (max-width: 760px) {
   .nav-links {
