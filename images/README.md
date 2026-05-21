@@ -7,7 +7,8 @@ file exists, the page shows a colourful candy-swirl placeholder.
 | Filename                      | Used for                                      |
 | ----------------------------- | --------------------------------------------- |
 | `hero-background.png`         | Full-width spiral / tie-dye hero backdrop     |
-| `hero-sweets.png`             | Hero candy / lollipop photo                   |
+| `hero-sweets.png`             | Hero photo (shop storefront)                  |
+| `logo.png`                    | Navbar logo (transparent background)          |
 | `product-swirl-pops.png`      | Rainbow Swirl Lollipops card                  |
 | `product-gobstoppers.png`     | Giant Gobstoppers card                        |
 | `product-sherbet.png`         | Fizzy Sherbet Cups card                       |
