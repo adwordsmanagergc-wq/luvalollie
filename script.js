@@ -1,6 +1,6 @@
 /* =====================================================================
    Luv A Lollie — script.js
-   Vanilla JS: floating lollipops, mobile nav, swipeable TikTok slider.
+   Vanilla JS: floating lollipops, mobile nav.
    ===================================================================== */
 (function () {
   "use strict";
@@ -48,46 +48,6 @@
   }
 
   /* ------------------------------------------------------------------
-     Swipeable TikTok video slider
-  ------------------------------------------------------------------ */
-  function setupSlider() {
-    var track = document.getElementById("sliderTrack");
-    var prev = document.getElementById("sliderPrev");
-    var next = document.getElementById("sliderNext");
-    if (!track || !prev || !next) return;
-
-    var slides = track.querySelectorAll(".slide");
-    /* with a single video there's nothing to swipe — hide the arrows */
-    if (slides.length < 2) {
-      prev.hidden = true;
-      next.hidden = true;
-      return;
-    }
-
-    function step() {
-      var slide = track.querySelector(".slide");
-      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-      return slide ? slide.getBoundingClientRect().width + gap : track.clientWidth;
-    }
-
-    prev.addEventListener("click", function () {
-      track.scrollBy({ left: -step(), behavior: "smooth" });
-    });
-    next.addEventListener("click", function () {
-      track.scrollBy({ left: step(), behavior: "smooth" });
-    });
-
-    function updateButtons() {
-      var maxScroll = track.scrollWidth - track.clientWidth - 2;
-      prev.disabled = track.scrollLeft <= 2;
-      next.disabled = track.scrollLeft >= maxScroll;
-    }
-    track.addEventListener("scroll", updateButtons, { passive: true });
-    window.addEventListener("resize", updateButtons);
-    updateButtons();
-  }
-
-  /* ------------------------------------------------------------------
      Footer year
   ------------------------------------------------------------------ */
   function setYear() {
@@ -101,7 +61,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     spawnLollipops();
     setupNav();
-    setupSlider();
     setYear();
   });
 })();
