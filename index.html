@@ -87,17 +87,11 @@
 
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="#top">Home</a>
-      <a href="#shop">Shop</a>
+      <a href="#videos">Watch</a>
       <a href="#about">About</a>
       <a href="#visit">Visit</a>
       <a href="#contact">Contact</a>
     </nav>
-
-    <button class="cart" id="cartBtn" type="button" aria-label="Shopping cart">
-      <span class="cart-icon" aria-hidden="true">&#127852;</span>
-      <span class="cart-label">Cart</span>
-      <span class="cart-count" id="cartCount" aria-live="polite">0</span>
-    </button>
 
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -121,7 +115,7 @@
             A joyful candy stop in Sheffield &mdash; loved by tourists exploring
             <strong>Cradle Mountain</strong> &amp; <strong>Mt Roland</strong>.
           </p>
-          <a href="#shop" class="btn btn--shop">Shop Now</a>
+          <a href="#videos" class="btn btn--hero">Watch Our Videos</a>
         </div>
 
         <div class="hero-image-area">
@@ -138,15 +132,31 @@
       <div class="hero-wave" aria-hidden="true"></div>
     </section>
 
-    <!-- ===================== SHOP ===================== -->
-    <section class="shop section" id="shop">
+    <!-- ===================== VIDEOS ===================== -->
+    <section class="videos section" id="videos">
       <div class="section-head">
-        <h2 class="section-title">Featured Sweets</h2>
-        <p class="section-sub">Far-out treats, freshly jarred &mdash; prices in AUD</p>
+        <h2 class="section-title">Watch Us on TikTok</h2>
+        <p class="section-sub">Swipe through our grooviest clips</p>
       </div>
 
-      <div class="product-grid" id="productGrid">
-        <!-- product cards injected by script.js -->
+      <div class="video-slider">
+        <button class="slider-btn slider-btn--prev" id="sliderPrev" type="button" aria-label="Previous video">&#8249;</button>
+
+        <div class="slider-track" id="sliderTrack" tabindex="0" aria-label="TikTok video slider">
+          <div class="slide">
+            <blockquote
+              class="tiktok-embed"
+              cite="https://www.tiktok.com/@luv.a.lollie/video/7517578846011526417"
+              data-video-id="7517578846011526417"
+            >
+              <section>
+                <a href="https://www.tiktok.com/@luv.a.lollie" target="_blank" rel="noopener">@luv.a.lollie on TikTok</a>
+              </section>
+            </blockquote>
+          </div>
+        </div>
+
+        <button class="slider-btn slider-btn--next" id="sliderNext" type="button" aria-label="Next video">&#8250;</button>
       </div>
     </section>
 
@@ -285,9 +295,7 @@
     </p>
   </footer>
 
-  <!-- toast for add-to-cart feedback -->
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
   <script src="script.js"></script>
+  <script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 </html>

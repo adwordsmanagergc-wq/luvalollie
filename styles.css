@@ -178,46 +178,6 @@ a { color: inherit; }
   color: var(--ink);
 }
 
-/* cart counter */
-.cart {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-body);
-  font-weight: 800;
-  font-size: 1rem;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  padding: 0.5rem 0.95rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--purple), var(--pink));
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.18s ease;
-}
-.cart:hover { transform: translateY(-3px) scale(1.04); }
-.cart-icon { font-size: 1.2rem; }
-
-.cart-count {
-  min-width: 1.6rem;
-  height: 1.6rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--yellow);
-  color: var(--ink);
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 800;
-  padding: 0 0.35rem;
-}
-.cart-count.bump { animation: bump 0.4s ease; }
-@keyframes bump {
-  0% { transform: scale(1); }
-  40% { transform: scale(1.5) rotate(-12deg); }
-  100% { transform: scale(1); }
-}
-
 /* hamburger (mobile) */
 .nav-toggle {
   display: none;
@@ -369,68 +329,58 @@ a { color: inherit; }
   margin-top: 0.3rem;
 }
 
-/* =========================== SHOP ================================= */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 1.6rem;
-}
-
-.product-card {
-  background: #fff;
-  border-radius: 24px;
-  padding: 1rem 1rem 1.3rem;
-  box-shadow: var(--shadow-soft);
-  border: 4px solid transparent;
-  text-align: center;
+/* ========================== VIDEOS ================================ */
+.video-slider {
   display: flex;
-  flex-direction: column;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
 }
 
-.product-card:hover {
-  transform: translateY(-10px) rotate(-1.5deg);
-  box-shadow: var(--shadow-pop);
-  /* candy-stripe / spiral border on hover */
-  border-image: repeating-linear-gradient(
-    45deg,
-    var(--pink) 0 12px,
-    var(--yellow) 12px 24px,
-    var(--turquoise) 24px 36px
-  ) 4;
+.slider-track {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  justify-content: safe center;
+  padding: 0.4rem 0.25rem 1.2rem;
+  scrollbar-width: none;
+}
+.slider-track::-webkit-scrollbar { display: none; }
+
+.slide {
+  flex: 0 0 auto;
+  width: clamp(325px, 90vw, 340px);
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.product-thumb {
-  border-radius: 18px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  width: 100%;
-  margin-bottom: 0.85rem;
-  background: conic-gradient(
-    from 0deg, var(--pink), var(--yellow), var(--turquoise), var(--purple), var(--pink)
-  );
+/* TikTok's embed.js swaps the blockquote for an iframe — keep it tidy */
+.slide .tiktok-embed,
+.slide iframe {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  border-radius: 22px;
 }
 
-.product-name {
-  font-family: "Lobster", cursive;
-  font-size: 1.45rem;
-  color: var(--ink);
+.slider-btn {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.9rem;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.16s ease, opacity 0.16s ease;
 }
-
-.product-desc {
-  font-size: 0.9rem;
-  color: #6b5577;
-  margin: 0.15rem 0 0.7rem;
-  flex: 1;
-}
-
-.product-price {
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--lime);
-  -webkit-text-stroke: 0.6px var(--ink);
-  margin-bottom: 0.8rem;
-}
+.slider-btn:hover:not(:disabled) { transform: scale(1.12); }
+.slider-btn:disabled { opacity: 0.3; cursor: default; }
 
 /* ============================ BUTTONS ============================== */
 .btn {
@@ -459,7 +409,7 @@ a { color: inherit; }
   60%      { transform: translateY(-4px)  scale(1.02); }
 }
 
-.btn--shop {
+.btn--hero {
   background: linear-gradient(135deg, var(--pink), var(--orange));
   font-size: 1.3rem;
   padding: 1rem 2.4rem;
@@ -468,11 +418,6 @@ a { color: inherit; }
 .btn--map {
   background: linear-gradient(135deg, var(--turquoise), var(--purple));
   margin-top: 1.2rem;
-}
-
-.btn--cart {
-  background: linear-gradient(135deg, var(--purple), var(--pink));
-  width: 100%;
 }
 
 /* ============================ ABOUT =============================== */
@@ -657,23 +602,6 @@ a { color: inherit; }
   color: var(--yellow);
 }
 
-/* ============================ TOAST =============================== */
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 26px;
-  transform: translate(-50%, 140%);
-  background: linear-gradient(135deg, var(--lime), var(--turquoise));
-  color: var(--ink);
-  font-weight: 800;
-  padding: 0.85rem 1.5rem;
-  border-radius: 999px;
-  box-shadow: var(--shadow-pop);
-  z-index: 200;
-  transition: transform 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
-}
-.toast.show { transform: translate(-50%, 0); }
-
 /* ========================= RESPONSIVE ============================= */
 @media (max-width: 760px) {
   .nav-links {
@@ -696,14 +624,4 @@ a { color: inherit; }
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero-title { justify-content: center; }
   .visit-inner { grid-template-columns: 1fr; }
-}
-
-/* keep the shop grid at two cards per row on phones */
-@media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
-  }
-  .product-card { padding: 0.7rem 0.7rem 1rem; }
-  .product-name { font-size: 1.2rem; }
 }
