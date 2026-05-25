@@ -87,10 +87,16 @@
 
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="#top">Home</a>
+      <a href="#shop">Shop</a>
       <a href="#about">About</a>
       <a href="#visit">Visit</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <button class="cart" id="cartBtn" type="button" aria-label="Shopping cart">
+      <span class="cart-icon" aria-hidden="true">&#127852;</span>
+      <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+    </button>
 
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -128,6 +134,18 @@
       </div>
 
       <div class="hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===================== SHOP ===================== -->
+    <section class="shop section" id="shop">
+      <div class="section-head">
+        <h2 class="section-title">Most Loved</h2>
+        <p class="section-sub">A sweet selection of our favourites &mdash; prices in AUD</p>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- product cards injected by script.js -->
+      </div>
     </section>
 
     <!-- ===================== ABOUT ===================== -->
@@ -273,6 +291,9 @@
       <a href="https://metatapdigital.com" target="_blank" rel="noopener">Metatap Digital</a>
     </p>
   </footer>
+
+  <!-- toast for add-to-cart feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>

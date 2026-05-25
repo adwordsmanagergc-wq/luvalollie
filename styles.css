@@ -178,6 +178,46 @@ a { color: inherit; }
   color: var(--ink);
 }
 
+/* cart counter */
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 0.45rem 0.85rem 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.18s ease;
+}
+.cart:hover { transform: translateY(-3px) scale(1.04); }
+.cart-icon { font-size: 1.15rem; }
+
+.cart-count {
+  min-width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--purple);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 0 0.4rem;
+}
+.cart-count.bump { animation: bump 0.4s ease; }
+@keyframes bump {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.5) rotate(-12deg); }
+  100% { transform: scale(1); }
+}
+
 /* hamburger (mobile) */
 .nav-toggle {
   display: none;
@@ -327,6 +367,52 @@ a { color: inherit; }
   margin-top: 0.3rem;
 }
 
+/* =========================== SHOP ================================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(0.9rem, 2.5vw, 1.6rem);
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 1rem 1rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-pop);
+}
+
+.product-thumb {
+  border-radius: 16px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 0.9rem;
+  background: linear-gradient(135deg, var(--turquoise), var(--yellow));
+}
+
+.product-name {
+  font-family: "Lobster", cursive;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  color: var(--purple);
+  margin-bottom: 0.25rem;
+}
+
+.product-price {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 0.85rem;
+  flex: 1;
+}
+
 /* ============================ BUTTONS ============================== */
 .btn {
   display: inline-block;
@@ -357,6 +443,13 @@ a { color: inherit; }
 .btn--map {
   background: linear-gradient(135deg, var(--turquoise), var(--purple));
   margin-top: 1.2rem;
+}
+
+.btn--cart {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
 }
 
 /* ============================ ABOUT =============================== */
@@ -560,6 +653,23 @@ a { color: inherit; }
 }
 .footer-credit a:hover,
 .footer-credit a:focus-visible { color: var(--yellow); }
+
+/* ============================ TOAST =============================== */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  transform: translate(-50%, 140%);
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: #fff;
+  font-weight: 800;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow-pop);
+  z-index: 200;
+  transition: transform 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+.toast.show { transform: translate(-50%, 0); }
 
 /* ========================= RESPONSIVE ============================= */
 @media (max-width: 760px) {
