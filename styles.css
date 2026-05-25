@@ -5,18 +5,18 @@
    ===================================================================== */
 
 :root {
-  --pink:      #ff3ea5;
-  --orange:    #ff7a18;
-  --yellow:    #ffd23f;
-  --lime:      #8ed81c;
-  --turquoise: #1ec8c8;
-  --purple:    #8a3ffb;
+  --pink:      #ec4899;   /* hot pink (primary) */
+  --orange:    #ff8aaa;   /* coral pink */
+  --yellow:    #ffe2ec;   /* very pale pink (soft bg accents) */
+  --lime:      #f48fb1;   /* mid pink */
+  --turquoise: #fbcfe0;   /* soft pink */
+  --purple:    #be185d;   /* deep rose (heading accents) */
 
-  --cream:  #fff7e6;
-  --ink:    #3a1d4d;
+  --cream:  #fff8fa;
+  --ink:    #3a1726;
 
-  --shadow-soft: 0 10px 26px rgba(58, 29, 77, 0.22);
-  --shadow-pop:  0 16px 38px rgba(58, 29, 77, 0.32);
+  --shadow-soft: 0 10px 26px rgba(190, 24, 93, 0.18);
+  --shadow-pop:  0 16px 38px rgba(190, 24, 93, 0.28);
 
   --font-head:  "Bagel Fat One", "Lobster", cursive;
   --font-body:  "Nunito", "Poppins", system-ui, sans-serif;
@@ -199,14 +199,12 @@ a { color: inherit; }
 .hero {
   position: relative;
   padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 5vw, 3rem) 5rem;
-  /* [PLACEHOLDER: background image] — gradient is a fallback if the
-     png is missing; replace images/hero-background.png via GitHub. */
-  background-image:
-    linear-gradient(rgba(255, 247, 230, 0.55), rgba(255, 247, 230, 0.75)),
-    url("images/hero-background.png");
-  background-color: var(--turquoise);
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(
+    135deg,
+    var(--turquoise) 0%,
+    var(--cream) 50%,
+    var(--yellow) 100%
+  );
 }
 
 .hero-inner {
@@ -493,7 +491,7 @@ a { color: inherit; }
 /* =========================== FOOTER =============================== */
 .footer {
   margin-top: 3rem;
-  background: linear-gradient(160deg, var(--purple), #5a1f8f 70%, var(--pink));
+  background: linear-gradient(160deg, var(--purple), var(--pink));
   color: #fff;
   padding: 3rem clamp(1rem, 5vw, 3rem) 1.5rem;
   position: relative;
